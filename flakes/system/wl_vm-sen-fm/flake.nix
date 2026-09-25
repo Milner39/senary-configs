@@ -25,10 +25,17 @@
     senaryosConfigurations = {
 
       # nix run --impure ./senary-configs/flakes/system/wl_vm-sen-fm#senaryosConfigurations.default
+      # nix run --impure --override-input senaryos ./senary-os ./senary-configs/flakes/system/wl_vm-sen-fm#senaryosConfigurations.default
       default = (senary {
         nixpkgs-path  =  nixpkgs;
         site-dir      =  ./src;
-      }).host.default.configuration.vm;
+
+        extra-auto-args = {
+          # Kinda messy, going to fix this.
+          # Caused by sixos not exposing it's overrides.
+          inherit senaryos nixpkgs nixpkgs-unstable;
+        };
+      }).hosts.default.configuration.vm;
 
     };
   };

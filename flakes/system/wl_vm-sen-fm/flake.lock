@@ -44,13 +44,13 @@
       "locked": {
         "lastModified": 1790280608,
         "narHash": "sha256-wITqlvUFEBuVKxS7XCDlYoNwnNIkgJl9L8P6BhAjMa8=",
-        "owner": "milner39",
+        "owner": "Milner39",
         "repo": "senary-os",
         "rev": "d1039d22bac4bfdc77a1d3dba66af785a78e59f2",
         "type": "github"
       },
       "original": {
-        "owner": "milner39",
+        "owner": "Milner39",
         "repo": "senary-os",
         "type": "github"
       }
