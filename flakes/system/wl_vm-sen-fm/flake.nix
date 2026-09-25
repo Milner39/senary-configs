@@ -2,8 +2,8 @@
   inputs = {
 
     senaryos = {
-      url = "github:milner39/senary-os";
-      flake = false;
+      url    =  "github:Milner39/senary-os";
+      flake  =  false;
     };
 
     nixpkgs.url           =  "github:nixos/nixpkgs/nixos-26.05";
@@ -19,14 +19,16 @@
     ...
   } @ inputs: let
 
-    senaryos = import senaryos;
+    senary = import senaryos;
 
   in {
     senaryosConfigurations = {
 
       # nix run --impure ./senary-configs/flakes/system/wl_vm-sen-fm#senaryosConfigurations.default
-      default = {
-      };
+      default = (senary {
+        nixpkgs-path  =  nixpkgs;
+        site-dir      =  ./src;
+      }).host.default.configuration.vm;
 
     };
   };
