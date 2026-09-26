@@ -4,6 +4,8 @@
 }:
 
 [(final: prev: infuse prev {
+  boot.kernel.package.__assign = final.pkgs.linux_6_6;
+
   boot.initrd.contents."early/run".__prepend = [''
     echo initrd: executing /early/run
     mkdir -p /root
