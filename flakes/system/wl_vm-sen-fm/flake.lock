@@ -42,11 +42,11 @@
     "senaryos": {
       "flake": false,
       "locked": {
-        "lastModified": 1790280608,
-        "narHash": "sha256-wITqlvUFEBuVKxS7XCDlYoNwnNIkgJl9L8P6BhAjMa8=",
+        "lastModified": 1790430958,
+        "narHash": "sha256-w3ftjgkObyb719+nwUcuNBbTVRqXouUMQi+IQBVV50E=",
         "owner": "Milner39",
         "repo": "senary-os",
-        "rev": "d1039d22bac4bfdc77a1d3dba66af785a78e59f2",
+        "rev": "13f53dd1cd8e2ddeead38e5741e212c65141c66b",
         "type": "github"
       },
       "original": {

@@ -2,7 +2,7 @@
 
 {
   hosts = ./hosts;
-  tags = {};
+  tags = ./tags;
   subnets = {};
   overlay = [];
 }
