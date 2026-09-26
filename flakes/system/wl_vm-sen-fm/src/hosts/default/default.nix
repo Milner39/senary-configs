@@ -37,6 +37,7 @@ in infuse host-prev {
 
 
   tags.dont-mount-root.__assign = true;
+  tags.has-initrd-mount-root.__assign = false;
   tags.is-qemu-vm.__assign = true;
 
 
@@ -48,7 +49,8 @@ in infuse host-prev {
   boot.kernel.params.__append = [ "console=ttyS0,115200n8" ];
 
 
-  targets.dnscache.__assign    =  host.six.mkBundle { };
-  targets.nix-daemon.__assign  =  host.services.nix-daemon { package = host.pkgs.nix; };
+  targets.dnscache.__assign                  =  host.six.mkBundle { };
+  targets.nix-daemon.__assign                =  host.six.mkBundle { };
+  targets.update-activated-profile.__assign  =  host.six.mkBundle { };
 
 }
